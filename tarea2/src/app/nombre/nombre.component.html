@@ -1,0 +1,4 @@
+<label>Nombre</label>
+<input type="text" class="form-control" [(ngModel)]="suNombre" (input)="onCambiaNombre()">
+<p>El nombre que usted escribió es: <b>{{suNombre}}</b></p>
+<button type="button" class="btn btn-primary" [disabled]="!habilitarBoton" (click)="onLimpiar()">Borrar</button>
