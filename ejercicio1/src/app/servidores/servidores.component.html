@@ -1,9 +1,9 @@
 <h3>Nombre del servidor</h3>
-<!--Utilizando $event lo que se hace es mandar como parámetro el dato que contiene el evento-->
+<!--Utilizando $event lo que se hace es mandar como parámetro el dato que contiene el evento
 <input type="text" class="form-control" (input)="onActualizarNombreEstado($event)">
+-->
 <!--Se utiliza two way data binding haciendo uso de ngModel-->
 <input type="text" class="form-control" [(ngModel)]="nombreServidor">
-<p>{{nombreServidor}}</p>
 <button class="btn btn-primary" [disabled]= "!permitirNuevoServidor" (click)="onCrearServidor()">Agregar servidor</button>
 <p>{{estadoCreacionServidor}}</p>
 <hr>
