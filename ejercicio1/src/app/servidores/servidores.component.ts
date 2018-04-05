@@ -9,6 +9,7 @@ export class ServidoresComponent implements OnInit {
   nombreServidor='Servidor de prueba';
 	permitirNuevoServidor = false;
 	estadoCreacionServidor = 'No ha sido creado ningún servidor!';
+  servidorCreado = false;
 
   constructor() { 
   	setTimeout(() => {
@@ -20,6 +21,7 @@ export class ServidoresComponent implements OnInit {
   }
 
   onCrearServidor(){
+    this.servidorCreado = true;
   	this.estadoCreacionServidor = 'El servidor ha sido creado y se llama ' + this.nombreServidor;
   }
 

@@ -5,6 +5,8 @@
 <!--Se utiliza two way data binding haciendo uso de ngModel-->
 <input type="text" class="form-control" [(ngModel)]="nombreServidor">
 <button class="btn btn-primary" [disabled]= "!permitirNuevoServidor" (click)="onCrearServidor()">Agregar servidor</button>
-<p>{{estadoCreacionServidor}}</p>
+<p *ngIf="servidorCreado">El servidor fue creado, su nombre es {{nombreServidor}}</p>
+
+<!--<p>{{estadoCreacionServidor}}</p>-->
 <hr>
 <app-servidor></app-servidor>

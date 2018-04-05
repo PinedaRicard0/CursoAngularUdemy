@@ -7,9 +7,17 @@ import { Component } from '@angular/core';
 })
 export class ServidorComponent{
 	idServidor = 15;
-	estadoServidor = 'desconectado';
+	estadoServidor = '';
+
+	constructor(){
+		this.estadoServidor = Math.random() > 0.5 ? 'en línea' : "desconectado";
+	}
 
 	getEstadoServidor(){
 		return this.estadoServidor;
+	}
+
+	getColor(){
+		return this.estadoServidor === 'desconectado' ? 'red' : 'green';
 	}
 }
