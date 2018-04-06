@@ -3,7 +3,12 @@ import { Component } from '@angular/core';
 
 @Component({
 	selector:'app-servidor',
-	templateUrl: './servidor.component.html'
+	templateUrl: './servidor.component.html',
+	styles: [`
+	.enLinea{
+		color: white
+	}
+	`]
 })
 export class ServidorComponent{
 	idServidor = 15;

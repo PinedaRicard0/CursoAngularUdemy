@@ -1,1 +1,2 @@
-<p [ngStyle]="{backgroundColor: getColor()}">El {{'servidor'}} con identificación: <b>{{idServidor}}</b> esta<b> {{getEstadoServidor()}}</b></p>
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{enLinea: estadoServidor === 'en línea'}">El {{'servidor'}} con identificación: <b>{{idServidor}}</b> esta<b> {{getEstadoServidor()}}</b></p>

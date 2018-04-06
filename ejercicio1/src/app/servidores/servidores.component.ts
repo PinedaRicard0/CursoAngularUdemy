@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servidores.component.css']
 })
 export class ServidoresComponent implements OnInit {
-  nombreServidor='Servidor de prueba';
+  nombreServidor='';
 	permitirNuevoServidor = false;
 	estadoCreacionServidor = 'No ha sido creado ningún servidor!';
   servidorCreado = false;
+  servidores = [];
 
   constructor() { 
   	setTimeout(() => {
@@ -23,6 +24,7 @@ export class ServidoresComponent implements OnInit {
   onCrearServidor(){
     this.servidorCreado = true;
   	this.estadoCreacionServidor = 'El servidor ha sido creado y se llama ' + this.nombreServidor;
+    this.servidores.push(this.nombreServidor);
   }
 
   onActualizarNombreEstado(evento:Event)
