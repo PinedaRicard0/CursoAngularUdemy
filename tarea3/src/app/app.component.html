@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p>1. Agregar un botón que diga mostrar detalles</p>
+      <p>2. Agrega un parrafo con un contenido que tu quieras ej: contraseña: *******</p>
+      <p>3. Alternar la visualización del parrafo con el botón creado en el primer paso</p>
+      <p>4. muestra todos los click sobre el botón en un array bajo del párrafo (puede ser la hora del click o simplemente un consecutivo)</p>
+      <p>Empezando en el quinto ítem del arreglo, dale a todo los log un backgroun azul (ngStyle) y una letra blanca (ngClass)</p>
+      <hr>
+    </div>
+    <div class="col-xs-12">
+      <button type="button" class="btn btn-success" (click)="onMostrarDetalles()">Mostrar detalles</button>
+      <p *ngIf="mostrarTexto">Contraseña: *******</p>
+      <br>
+      <p *ngFor="let conteo of clicks">este es el click número: {{conteo}}</p>
+    </div>
+  </div>
+</div>
