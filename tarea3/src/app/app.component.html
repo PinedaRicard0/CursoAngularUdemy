@@ -12,7 +12,10 @@
       <button type="button" class="btn btn-success" (click)="onMostrarDetalles()">Mostrar detalles</button>
       <p *ngIf="mostrarTexto">Contraseña: *******</p>
       <br>
-      <p *ngFor="let conteo of clicks">este es el click número: {{conteo}}</p>
+      <p *ngFor="let conteo of clicks"
+          [ngStyle]="{backgroundColor: (conteo >= 5) ? 'blue' : 'white'}"
+          [ngClass]="{'fondoBlanco': conteo >= 5}"
+          >este es el click número: {{conteo}}</p>
     </div>
   </div>
 </div>
